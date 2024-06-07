@@ -1,0 +1,17 @@
+name: "classic_transformer"
+target_col: "close"
+batch_size: 16
+days_lag: 3
+days_ahead: 1
+embed_dim: 8
+nhead: 1
+num_layers: 1
+learning_rate: 0.001
+max_epochs: 300
+patience: 50
+accelerator: "cpu"
+train_num_workers: 0
+val_num_workers: 0
+inference_num_workers: 0
+train_val_split: 0.9
+seed: 42

@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  web_app:
+    build:
+      dockerfile: web_app/Dockerfile
+    image: web_app:latest
+    restart: always
+    env_file:
+      - web_app/.env
+    ports:
+      - 8501:8501
+    depends_on:
+      - api
+
+  api:
+    build:
+      dockerfile: api/Dockerfile
+    image: api:latest
+    restart: always
+    volumes:
+      - ./credentials:/app/src/credentials
+    env_file:
+      - api/.env    
+    ports:
+      - 8001:8001

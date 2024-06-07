@@ -1,0 +1,11 @@
+hydra:
+  output_subdir: null  
+  run:
+    dir: .
+
+defaults:
+  - model: classic_transformer
+  - data: data
+  - override hydra/hydra_logging: disabled
+  - override hydra/job_logging: disabled
+  - _self_
