@@ -106,7 +106,3 @@ target/
 
 # Hydra logs
 outputs
-
-# Ignore images, except for the ones in the images folder
-!images/
-*.png
